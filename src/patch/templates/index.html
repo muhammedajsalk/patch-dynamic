@@ -384,55 +384,15 @@
                 </div>
                 <div class="right">
                     <ul>
+                        {% for promoter in promoters %}
                         <li>
                             <img
-                                src="{% static 'images/index-faq-press-1.jpg' %}"
+                                src="{{promoter.image.url}}"
                                 alt="index-faq-press-1"
                             />
-                            <span>The Daily Mail</span>
+                            <span>{{promoter.name}}</span>
                         </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-2.jpg' %}"
-                                alt="index-faq-press-2"
-                            />
-                            <span>The Next Web</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-3.jpg' %}"
-                                alt="index-faq-press-3"
-                            />
-                            <span>Reuters</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-3.jpg' %}"
-                                alt="index-faq-press-3"
-                            />
-                            <span>Reuters</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-3.jpg' %}"
-                                alt="index-faq-press-3"
-                            />
-                            <span>Reuters</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-4.jpg' %}"
-                                alt="index-faq-press-4"
-                            />
-                            <span>London Evening Standard</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-5.jpg' %}"
-                                alt="index-faq-press-5"
-                            />
-                            <span>Forbes</span>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </section>
