@@ -13,7 +13,7 @@ class Testimonial(models.Model):
 
 class Promoter(models.Model):
    name= models.CharField(max_length=255)
-   image= models.ImageField(upload_to="promoters")
+   image= models.ImageField(upload_to="promoters/")
 
 
    def __str__(self):
