@@ -3,7 +3,7 @@ from web.models import Testimonial,Promoter,Faq
 
 
 class TestimonialAdmin(admin.ModelAdmin):
-    list_display = ["id","name","designation","description"]
+    list_display = ["id","name","designation","image","description"]
 
 admin.site.register(Testimonial,TestimonialAdmin)
 
