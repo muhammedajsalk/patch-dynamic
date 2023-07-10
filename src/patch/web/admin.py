@@ -1,5 +1,5 @@
 from django.contrib import admin
-from web.models import Testimonial,Promoter,Faq
+from web.models import Testimonial,Promoter,Faq,Subscribe
 
 
 class TestimonialAdmin(admin.ModelAdmin):
@@ -18,3 +18,6 @@ class FaqAdmin(admin.ModelAdmin):
     list_display = ["id","title","description","faq_type"]
 
 admin.site.register(Faq,FaqAdmin)
+
+
+admin.site.register(Subscribe)
