@@ -34,9 +34,10 @@ $(document).ready(function () {
 
                var title = data["title"]
                var message = data["message"]
+               var status = data["status"]
 
                Swal.fire({
-                icon: 'success',
+                icon: status,
                 title: title,
                 text: message,
               })

@@ -28,15 +28,23 @@ def index(request):
 
 def subscribe(request):
     email = request.POST.get("email")
-    Subscribe.objects.create(
-        email = email
-    )
+    
+    if not Subscribe.objects.filter(email=email).exists():
+        
+        Subscribe.objects.create(
+          email = email
+        )
 
-    response_data={
-        "status" : "success",
-        "title" : "Successfully Registered",
-        "message" : "You Subscribed to our newsletter successfully"
-    }
-
+        response_data={
+            "status" : "success",
+            "title" : "Successfully Registered",
+            "message" : "You Subscribed to our newsletter successfully"
+        }
+    else:
+        response_data={
+            "status" : "error",
+            "title" : "You are already subscribed",
+            "message" : "You are already member. No need to register again"
+        }
 
     return HttpResponse(json.dumps(response_data),content_type="application/javascript")
