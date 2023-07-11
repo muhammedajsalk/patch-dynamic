@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.urls import reverse
 from django.http.response import HttpResponse
 from web.models import Testimonial,Promoter,Faq,Subscribe
 
@@ -27,4 +28,4 @@ def subscribe(request):
     Subscribe.objects.create(
         email = email
     )
-    return HttpResponse(email)
+    return redirect(reverse("web:index"))
