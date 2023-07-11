@@ -40,7 +40,12 @@ $(document).ready(function () {
                 icon: status,
                 title: title,
                 text: message,
-              })
+              });
+
+              if (status == "success"){
+                $this.trigger("reset");
+              }
+              
             },
             error:function(error){
                console.log("Error");
