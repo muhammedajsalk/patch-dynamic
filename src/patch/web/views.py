@@ -34,6 +34,7 @@ def subscribe(request):
 
     response_data={
         "status" : "success",
+        "title" : "Successfully Registered",
         "message" : "You Subscribed to our newsletter successfully"
     }
 

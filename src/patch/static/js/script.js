@@ -31,6 +31,15 @@ $(document).ready(function () {
             cache: false,
             success:function(data){
                console.log(data);
+
+               var title = data["title"]
+               var message = data["message"]
+
+               Swal.fire({
+                icon: 'success',
+                title: title,
+                text: message,
+              })
             },
             error:function(error){
                console.log("Error");
