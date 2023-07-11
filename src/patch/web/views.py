@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from web.models import Testimonial,Promoter,Faq
+from django.http.response import HttpResponse
+from web.models import Testimonial,Promoter,Faq,Subscribe
 
 
 def index(request):
@@ -19,3 +20,11 @@ def index(request):
 
     }
     return render(request,"index.html",context=context)
+
+
+def subscribe(request):
+    email = request.POST.get("email")
+    Subscribe.objects.create(
+        email = email
+    )
+    return HttpResponse(email)
