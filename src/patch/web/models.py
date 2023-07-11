@@ -11,7 +11,7 @@ class Testimonial(models.Model):
    name = models.CharField(max_length=255)
    designation = models.CharField(max_length=255)
    image= models.ImageField(upload_to="testimonials/")
-   description = models.TextField()
+   description = models.TextField(blank=True,null=True)
 
    def __str__(self):
       return self.name
