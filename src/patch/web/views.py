@@ -1,5 +1,9 @@
+import json
+
 from django.shortcuts import render,redirect
+from django.http import HttpResponse
 from django.urls import reverse
+
 from web.models import Testimonial,Promoter,Faq,Subscribe
 
 
@@ -28,5 +32,10 @@ def subscribe(request):
         email = email
     )
 
+    response_data={
+        "status" : "success",
+        "message" : "You Subscribed to our newsletter successfully"
+    }
 
-    return redirect(reverse("web:index"))
+
+    return HttpResponse(json.dumps(response_data),content_type="application/javascript")

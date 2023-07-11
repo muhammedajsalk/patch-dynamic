@@ -29,8 +29,12 @@ $(document).ready(function () {
             processData: false,
             contentType: false,
             cache: false,
-            success:function(data){},
-            error:function(error){}
-        })
+            success:function(data){
+               console.log(data);
+            },
+            error:function(error){
+               console.log("Error");
+            },
+        });
     });
 });
