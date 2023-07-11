@@ -9,7 +9,7 @@ FAQ_TYPE = (
 
 class Testimonial(models.Model):
    name = models.CharField(max_length=255)
-   designation = models.CharField(max_length=255)
+   designation = models.CharField(max_length=255,default="Software engineer")
    image= models.ImageField(upload_to="testimonials/")
    description = models.TextField(blank=True,null=True)
 
