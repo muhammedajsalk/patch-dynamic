@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 
 FAQ_TYPE = (
    ("rent_tracking","Rent Tracking"),
@@ -54,3 +55,5 @@ class Subscribe(models.Model):
    #is_student = models.BooleanField(default=True)
 
    #document = models.FileField(upload_to="documents/")
+
+   #id = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
