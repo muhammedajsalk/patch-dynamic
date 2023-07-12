@@ -39,3 +39,10 @@ class Subscribe(models.Model):
 
    def __str__(self):
       return self.email
+
+
+#class TestModel(models.Model):
+   #id = models.BigAutoField()
+   #id = models.BigIntegerField()
+   #id = models.FloatField()
+   #id = models.DecimalField(max_digits=..,decimal_places=..)
