@@ -52,3 +52,5 @@ class Subscribe(models.Model):
    #id = models.DecimalField(max_digits=..,decimal_places=..)
 
    #is_student = models.BooleanField(default=True)
+
+   #document = models.FileField(upload_to="documents/")
