@@ -34,6 +34,12 @@ class Faq(models.Model):
    description = models.TextField()
    faq_type = models.CharField(max_length=128,choices=FAQ_TYPE)
 
+   class Meta:
+      db_table = "web_frequently_asked_questions"
+      ordering = ["title","-id"]
+      verbose_name = "Frequently Asked Question"
+      verbose_name_plural ="Frequently Asked Question"
+
    def __str__(self):
       return self.title
 
@@ -86,6 +92,10 @@ class Student(models.Model):
    class_name = models.CharField(max_length=128)
    division = models.CharField(max_length=128)
    groups = models.ManyToManyField("web.StudentGroup")
+
+
+   class Meta:
+      db_table = "web_student"
 
    def __str__(self):
       return self.name
