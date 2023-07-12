@@ -79,3 +79,21 @@ class Profile(models.Model):
    phone = models.CharField(max_length=128)
    photo = models.ImageField(upload_to="profile/",blank=True,null=True)
    user = models.OneToOneField("auth.User",on_delete=models.CASCADE)
+
+
+class Student(models.Model):
+   name = models.CharField(max_length=128)
+   class_name = models.CharField(max_length=128)
+   division = models.CharField(max_length=128)
+   groups = models.ManyToManyField("web.StudentGroup")
+
+   def __str__(self):
+      return self.name
+
+
+class StudentGroup(models.Model):
+   name = models.CharField(max_length=128)
+   color_name = models.CharField(max_length=128)
+
+   def __str__(self):
+      return self.name

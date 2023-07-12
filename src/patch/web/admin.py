@@ -1,5 +1,5 @@
 from django.contrib import admin
-from web.models import Testimonial,Promoter,Faq,Subscribe,Car,Manufacturer,Profile
+from web.models import Testimonial,Promoter,Faq,Subscribe,Car,Manufacturer,Profile,Student,StudentGroup
 
 
 class TestimonialAdmin(admin.ModelAdmin):
@@ -24,4 +24,8 @@ admin.site.register(Subscribe)
 
 admin.site.register(Car)
 admin.site.register(Manufacturer)
+
 admin.site.register(Profile)
+
+admin.site.register(Student)
+admin.site.register(StudentGroup)
