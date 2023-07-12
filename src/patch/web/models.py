@@ -46,3 +46,5 @@ class Subscribe(models.Model):
    #id = models.BigIntegerField()
    #id = models.FloatField()
    #id = models.DecimalField(max_digits=..,decimal_places=..)
+
+   #is_student = models.BooleanField(default=True)
