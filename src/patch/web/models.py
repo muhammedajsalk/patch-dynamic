@@ -12,6 +12,9 @@ class Testimonial(models.Model):
    designation = models.CharField(max_length=255,default="Software engineer")
    image= models.ImageField(upload_to="testimonials/")
    description = models.TextField(blank=True,null=True)
+   dob = models.DateTimeField(blank=True,null=True)
+   #dob = models.DateField(blank=True,null=True)
+   #dob = models.TimeField(blank=True,null=True)
 
    def __str__(self):
       return self.name
@@ -36,6 +39,7 @@ class Faq(models.Model):
 
 class Subscribe(models.Model):
    email = models.EmailField(unique=True)
+   #created_time = models.DateTimeField(auto_now_add=True)
 
    def __str__(self):
       return self.email
