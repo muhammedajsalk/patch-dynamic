@@ -73,3 +73,9 @@ class Manufacturer(models.Model)   :
 
    def __str__(self):
       return self.name
+   
+
+class Profile(models.Model):
+   phone = models.CharField(max_length=128)
+   photo = models.ImageField(upload_to="profile/",blank=True,null=True)
+   user = models.OneToOneField("auth.User",on_delete=models.CASCADE)
