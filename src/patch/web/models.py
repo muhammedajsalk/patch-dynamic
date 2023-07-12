@@ -57,3 +57,19 @@ class Subscribe(models.Model):
    #document = models.FileField(upload_to="documents/")
 
    #id = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
+
+
+class Car(models.Model):
+   name = models.CharField(max_length=128)
+   color = models.CharField(max_length=128)
+   manufacturer = models.ForeignKey("web.Manufacturer",on_delete=models.CASCADE)
+   
+   def __str__(self):
+      return self.name
+
+
+class Manufacturer(models.Model)   :
+   name = models.CharField(max_length=128)
+
+   def __str__(self):
+      return self.name
